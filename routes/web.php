@@ -6,11 +6,11 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/',[ProdukController::class,'index'])
+Route::get('/',[BerandaController::class,'index'])
     ->name('beranda');
 
 
@@ -26,5 +26,6 @@ Route::get('/kategori/{slug}',[KategoriController::class,'index'])
     ->name('kategori.index');
 
     
-Route::get('/tentang',[BerandaController::class,'tentang'])
-    ->name('tentang');
+Route::get('/tentang', function(){
+    return view('tentang'); 
+})->name('tentang');
