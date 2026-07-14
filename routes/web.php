@@ -23,7 +23,7 @@ Route::get('/produk/{id}',[ProdukController::class,'show'])
 
 
 Route::get('/kategori/{slug}',[KategoriController::class,'index'])
-    ->name('kategori.index');
+    ->name('kategori.show');
 
     
 Route::get('/tentang', function(){

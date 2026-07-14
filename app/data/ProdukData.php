@@ -6,7 +6,7 @@ class ProdukData
 {
     public static function semua(): array
     {
-        return [
+      return [
             ['id' => 1, 'nama' => 'Laptop Vertex 14',   'kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 8750000, 'stok' => 6,  'unggulan' => true,  'deskripsi' => 'Laptop tipis 14 inci, RAM 16GB, cocok untuk coding dan kuliah.'],
             ['id' => 2, 'nama' => 'Mouse Nirkabel Zen', 'kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 185000,  'stok' => 40, 'unggulan' => false, 'deskripsi' => 'Mouse senyap dengan baterai tahan 12 bulan.'],
             ['id' => 3, 'nama' => 'Keyboard Mekanik K2','kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 620000,  'stok' => 0,  'unggulan' => true,  'deskripsi' => 'Switch biru, sangat memuaskan untuk mengetik kode.'],
