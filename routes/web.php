@@ -22,7 +22,7 @@ Route::get('/produk/{id}',[ProdukController::class,'show'])
     ->name('produk.show');
 
 
-Route::get('/kategori/{slug}',[KategoriController::class,'index'])
+Route::get('/kategori/{slug}',[KategoriController::class,'show'])
     ->name('kategori.show');
 
     
