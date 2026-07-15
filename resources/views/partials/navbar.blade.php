@@ -6,11 +6,40 @@
     <title>Navbar</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ route('beranda') }}">Beranda</a></li>
-            <li><a href="{{ route('tentang') }}">Tentang</a></li>
-            <li><a href="{{ route('kontak') }}">Kontak</a></li>
-        </ul>
+  <nav>
+
+    <a href="{{ route('beranda') }}" class="logo">
+        Tokoku
+    </a>
+
+    <ul>
+        <li>
+            <a 
+                href="{{ route('beranda') }}"
+                class="{{ request()->routeIs('beranda') ? 'active' : '' }}">
+                Beranda
+            </a>
+        </li>
+
+        <li>
+            <a 
+                href="{{ route('tentang') }}"
+                class="{{ request()->routeIs('tentang') ? 'active' : '' }}">
+                Tentang
+            </a>
+        </li>
+
+
+        <li>
+            <a 
+                href="{{ route('produk.index') }}"
+                class="{{ request()->routeIs('produk.*') ? 'active' : '' }}">
+                Produk
+            </a>
+        </li>
+    </ul>
+
+</nav>
+</nav>
 </body>
 </html>

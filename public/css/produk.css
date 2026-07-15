@@ -1,0 +1,196 @@
+/* Produk */
+
+body{
+    background:#f4f7fb;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.produk-header{
+    text-align:center;
+    margin:40px 0;
+}
+
+.produk-header h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.produk-header p{
+    color:#777;
+}
+
+.produk-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:25px;
+}
+
+.produk-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.produk-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,0,0,.15);
+}
+
+.kategori{
+    display:inline-block;
+    background:#eaf3ff;
+    color:#2563eb;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.produk-card h3{
+    margin:10px 0;
+    font-size:24px;
+}
+
+.harga{
+    font-size:28px;
+    color:#2563eb;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.tersedia{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.habis{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.btn-detail{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+
+}
+
+.btn-detail:hover{
+    background:#1d4ed8;
+}
+
+.btn-disabled{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#cbd5e1;
+    color:#666;
+}
+
+
+/* Detail Produk */
+.detail-produk{
+    display:flex;
+    justify-content:center;
+    margin:50px 0;
+}
+
+.detail-card{
+    width:600px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.detail-card h1{
+    margin:15px 0;
+    font-size:32px;
+    color:#1f2937;
+}
+
+.detail-card .harga{
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.detail-card .deskripsi{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.btn-kembali{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.btn-kembali:hover{
+    background:#1d4ed8;
+}
+
+.tersedia{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.habis{
+    color:#dc2626;
+    font-weight:bold;
+}
+
+/* Error Page */
+.error-page{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.error-card{
+    background:white;
+    width:500px;
+    text-align:center;
+    padding:50px 40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.error-card h1{
+    font-size:90px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.error-card h2{
+    color:#1f2937;
+    margin-bottom:15px;
+}
+
+.error-card p{
+    color:#6b7280;
+    line-height:1.6;
+    margin-bottom:30px;
+}

@@ -1,1 +1,1 @@
-kategori {{ $id }}
+kategori {{ $slug }}

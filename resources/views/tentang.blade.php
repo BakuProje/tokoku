@@ -1,30 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami</title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <h1>Tentang Kami</h1>
-    <p>
-        Selamat datang di <b>TokoKu</b>. Kami menyediakan berbagai produk
-        berkualitas seperti elektronik, fashion, dan makanan dengan harga yang terjangkau.
-    </p>
+@section('judul', 'Tentang')
 
-    <h2>Informasi Toko</h2>
-    <ul>
-        <li><b>Nama Toko:</b> TokoKu</li>
-        <li><b>Alamat:</b> Jl. kemanasaja No. 123, Makassar</li>
-        <li><b>Email:</b> tokoku@email.com</li>
-        <li><b>Telepon:</b> 0812-3456-7890</li>
-    </ul>
+@section('konten')
 
-    <h2>Developer</h2>
-    <p>
-        Website ini dibuat dengan Laravel sebagai tugas pembuatan.
-    </p>
+<div class="about-container">
 
-</body>
-</html>
+    <div class="about-header">
+        <h1>Tentang Kami</h1>
+        <p>
+            Selamat datang di <strong>TokoKu</strong>. Kami menyediakan berbagai produk
+            berkualitas seperti elektronik, fashion, dan makanan dengan harga yang
+            terjangkau.
+        </p>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <h2>Informasi Toko</h2>
+
+            <ul>
+                <li><strong>Nama Toko :</strong> TokoKu</li>
+                <li><strong>Alamat :</strong> Jl. Kemana Saja No. 123, Makassar</li>
+                <li><strong>Email :</strong> tokoku@email.com</li>
+                <li><strong>Telepon :</strong> 0812-3456-7890</li>
+            </ul>
+        </div>
+
+        <div class="about-card">
+            <h2>Developer</h2>
+
+            <p>
+                Website ini dibuat menggunakan <strong>Laravel</strong> sebagai tugas
+                pembuatan website sederhana dengan tampilan modern dan responsif.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+@endsection

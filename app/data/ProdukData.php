@@ -6,7 +6,7 @@ class ProdukData
 {
     public static function semua(): array
     {
-      return [
+        return [
             ['id' => 1, 'nama' => 'Laptop Vertex 14',   'kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 8750000, 'stok' => 6,  'unggulan' => true,  'deskripsi' => 'Laptop tipis 14 inci, RAM 16GB, cocok untuk coding dan kuliah.'],
             ['id' => 2, 'nama' => 'Mouse Nirkabel Zen', 'kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 185000,  'stok' => 40, 'unggulan' => false, 'deskripsi' => 'Mouse senyap dengan baterai tahan 12 bulan.'],
             ['id' => 3, 'nama' => 'Keyboard Mekanik K2','kategori' => 'Elektronik', 'slug_kategori' => 'elektronik', 'harga' => 620000,  'stok' => 0,  'unggulan' => true,  'deskripsi' => 'Switch biru, sangat memuaskan untuk mengetik kode.'],
@@ -16,5 +16,41 @@ class ProdukData
             ['id' => 7, 'nama' => 'Teh Hijau Premium',  'kategori' => 'Makanan',    'slug_kategori' => 'makanan',    'harga' => 48000,   'stok' => 0,  'unggulan' => false, 'deskripsi' => 'Daun teh pilihan, 20 kantong per kotak.'],
             ['id' => 8, 'nama' => 'Tas Ransel Trek 25L','kategori' => 'Fashion',    'slug_kategori' => 'fashion',    'harga' => 310000,  'stok' => 9,  'unggulan' => false, 'deskripsi' => 'Ransel tahan air dengan slot laptop 15 inci.'],
         ];
+    }
+
+    public static function cari($id): ?array
+    {
+        foreach (self::semua() as $produk) {
+            if ($produk['id'] == $id) {
+                return $produk;
+            }
+        }
+
+        return null;
+    }
+
+    public static function unggulan(): array
+    {
+        return array_filter(self::semua(), function ($produk) {
+            return $produk['unggulan'] == true;
+        });
+    }
+
+    public static function perKategori($slug): array
+    {
+        return array_filter(self::semua(), function ($produk) use ($slug) {
+            return $produk['slug_kategori'] == $slug;
+        });
+    }
+
+    public static function daftarKategori(): array
+    {
+        $kategori = [];
+
+        foreach (self::semua() as $produk) {
+            $kategori[$produk['slug_kategori']] = $produk['kategori'];
+        }
+
+        return $kategori;
     }
 }
