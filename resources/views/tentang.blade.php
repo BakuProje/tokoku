@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('judul', 'Tentang')
-
 @section('konten')
 
 <div class="about-container">

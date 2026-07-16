@@ -1,6 +1,6 @@
 <style>
 
-/* footer */
+/* Navbar */
 *{
     margin:0;
     padding:0;

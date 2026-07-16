@@ -1,13 +1,9 @@
 @extends('layouts.app')
-
 @section('judul', $produk['nama'])
-
 @section('konten')
 
 <div class="detail-produk">
-
     <div class="detail-card">
-
         <span class="kategori">
             {{ $produk['kategori'] }}
         </span>
@@ -41,7 +37,6 @@
         </a>
 
     </div>
-
 </div>
 
 @endsection

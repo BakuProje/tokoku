@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('judul', 'Beranda')
-
 @section('konten')
 
 <section class="home">

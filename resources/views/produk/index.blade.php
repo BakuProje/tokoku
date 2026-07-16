@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('judul','Produk')
-
 @section('konten')
 
 <div class="produk-header">

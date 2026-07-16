@@ -18,33 +18,28 @@ class ProdukData
         ];
     }
 
-    public static function cari($id): ?array
-    {
+    public static function ProdukId($id): ? array{
         foreach (self::semua() as $produk) {
             if ($produk['id'] == $id) {
                 return $produk;
             }
         }
-
         return null;
     }
 
-    public static function unggulan(): array
-    {
+    public static function unggulan(): array{
         return array_filter(self::semua(), function ($produk) {
             return $produk['unggulan'] == true;
         });
     }
 
-    public static function perKategori($slug): array
-    {
+    public static function perKategori($slug): array{
         return array_filter(self::semua(), function ($produk) use ($slug) {
             return $produk['slug_kategori'] == $slug;
         });
     }
 
-    public static function daftarKategori(): array
-    {
+    public static function daftarKategori(): array{
         $kategori = [];
 
         foreach (self::semua() as $produk) {
